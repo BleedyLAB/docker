@@ -21,6 +21,6 @@ jobs:
       - name: Login to Docker Hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME  }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker image
-        run: docker build -t bleedy/app:latest -t 
+        run: docker build -t bleedy/app:latest .
       - name: Publish Docker image
         run: docker push bleedy/app
